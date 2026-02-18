@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nightshiftsound.netlify.app/sitemap.xml
