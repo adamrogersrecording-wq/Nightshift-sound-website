@@ -218,6 +218,31 @@ a {
     50% { transform: translateY(-20px) scale(1.05); }
 }
 
+.audio-waveform-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    opacity: 0.03;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--color-primary) 0px,
+        transparent 2px,
+        transparent 8px,
+        var(--color-primary) 10px
+    );
+    mask-image: linear-gradient(to top, transparent, black 50%);
+    -webkit-mask-image: linear-gradient(to top, transparent, black 50%);
+    animation: waveSlide 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes waveSlide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(10px); }
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -373,6 +398,25 @@ a {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--color-primary) 20%,
+        var(--color-primary) 80%,
+        transparent
+    );
+    border-radius: 2px;
 }
 
 .section-subtitle {
@@ -397,6 +441,34 @@ a {
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--color-primary) 10%, 
+        var(--color-primary) 30%, 
+        transparent 35%,
+        transparent 40%,
+        var(--color-primary) 45%,
+        var(--color-primary) 60%,
+        transparent 65%,
+        transparent 70%,
+        var(--color-primary) 75%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.service-card:hover::after {
+    opacity: 0.3;
 }
 
 .service-card::before {
@@ -571,6 +643,119 @@ a {
     text-align: center;
     font-size: 0.875rem;
     color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* ==================== Featured Work ==================== */
+.featured-work {
+    padding: 6rem 0;
+    background: var(--color-bg);
+    position: relative;
+}
+
+.featured-work::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+.featured-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.featured-logo-card {
+    position: relative;
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+.featured-logo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(94, 234, 212, 0.05), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.featured-logo-card:hover::before {
+    opacity: 1;
+}
+
+.featured-logo-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-glow);
+}
+
+.logo-placeholder {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-text {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo-subtitle {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.logo-placeholder::before {
+    content: '🎙️';
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.rachel-cruze::before {
+    content: '💰';
+}
+
+.john-delony::before {
+    content: '🧠';
+}
+
+.george-kamel::before {
+    content: '📊';
+}
+
+.featured-note {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    margin-top: 2rem;
     font-style: italic;
 }
 
