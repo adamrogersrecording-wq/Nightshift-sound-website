@@ -43,42 +43,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Handling
+// Contact Form Handling (Netlify Forms)
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-        
-        // Show loading state
         const submitButton = contactForm.querySelector('.form-submit');
         const originalText = submitButton.textContent;
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
         
-        // Here you would normally send to your backend/email service
-        // For now, we'll just simulate and log the data
-        console.log('Form submitted with data:', data);
+        // Encode form data for Netlify
+        const formData = new FormData(contactForm);
         
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Show success message
-        alert('Thank you for your message! I\'ll get back to you within 24 hours. Check your email for a confirmation.');
-        
-        // Reset form
-        contactForm.reset();
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-        
-        // In production, you would integrate with:
-        // - Formspree (formspree.io)
-        // - Netlify Forms (built-in with Netlify)
-        // - EmailJS (emailjs.com)
-        // - Your own backend API
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            });
+            
+            if (response.ok) {
+                // Success!
+                alert('✅ Message sent successfully! I\'ll get back to you within 24 hours (usually much faster). Check your email for a confirmation.');
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Error handling
+            alert('❌ Oops! Something went wrong. Please try emailing me directly at adamrogers.recording@gmail.com or call/text (828) 226-1372.');
+            console.error('Form submission error:', error);
+        } finally {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
     });
 }
 
