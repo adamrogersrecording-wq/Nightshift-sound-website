@@ -1,27 +1,27 @@
 // Mobile Navigation Toggle
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
+if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
             navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
         }
     });
 
     // Close menu when clicking a link
-    const navLinks = navMenu.querySelectorAll('.nav-link');
+    const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
         });
     });
 }
@@ -43,7 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Handling (Netlify Forms)
+// Contact Form Handling - NETLIFY FORMS
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
@@ -55,10 +55,11 @@ if (contactForm) {
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
         
-        // Encode form data for Netlify
+        // Prepare form data for Netlify
         const formData = new FormData(contactForm);
         
         try {
+            // Submit to Netlify
             const response = await fetch('/', {
                 method: 'POST',
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -67,16 +68,17 @@ if (contactForm) {
             
             if (response.ok) {
                 // Success!
-                alert('✅ Message sent successfully! I\'ll get back to you within 24 hours (usually much faster). Check your email for a confirmation.');
+                alert('✅ Message sent successfully! I\'ll get back to you within 24 hours (usually much faster). Check your email for confirmation.');
                 contactForm.reset();
             } else {
                 throw new Error('Form submission failed');
             }
         } catch (error) {
-            // Error handling
-            alert('❌ Oops! Something went wrong. Please try emailing me directly at adamrogers.recording@gmail.com or call/text (828) 226-1372.');
+            // If something goes wrong, provide fallback contact info
+            alert('❌ Oops! Something went wrong. Please email me directly at adamrogers.recording@gmail.com or call/text (828) 226-1372.');
             console.error('Form submission error:', error);
         } finally {
+            // Reset button state
             submitButton.textContent = originalText;
             submitButton.disabled = false;
         }
@@ -110,14 +112,16 @@ document.querySelectorAll('.service-card, .feature, .testimonial-card, .pricing-
 let lastScroll = 0;
 const nav = document.querySelector('.nav');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        nav.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.5)';
-    } else {
-        nav.style.boxShadow = 'none';
-    }
-    
-    lastScroll = currentScroll;
-});
+if (nav) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            nav.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.5)';
+        } else {
+            nav.style.boxShadow = 'none';
+        }
+        
+        lastScroll = currentScroll;
+    });
+}

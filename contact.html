@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | NightShift Sound - Get Started Today</title>
-    <meta name="description" content="Contact NightShift Sound for professional podcast and YouTube audio services. Email, call, or fill out our quick form to get started.">
+    <title>Contact - NightShift Sound | Audio Engineering Services</title>
+    <meta name="description" content="Get in touch with NightShift Sound for professional podcast editing, YouTube audio post-production, and audio restoration services. Free consultation and sample edit available.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
-        <div class="nav-container">
+        <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">●</span>
+                <span class="logo-icon">🎚️</span>
                 <span class="logo-text">NightShift Sound</span>
             </a>
-            <div class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link active nav-link-cta">Get Started</a>
-            </div>
-            <button class="nav-toggle" id="navToggle">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-small active">Get Started</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -34,8 +36,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title">Get Started</h1>
-            <p class="page-subtitle">Let's discuss your project and how we can help you sound amazing</p>
+            <h1 class="page-title">Let's Work Together</h1>
+            <p class="page-subtitle">Get a free consultation and sample edit. I'll respond within 24 hours (usually same day).</p>
         </div>
     </section>
 
@@ -54,7 +56,7 @@
                             <div class="contact-icon">📧</div>
                             <div class="contact-item-content">
                                 <h3>Email</h3>
-                                <a href="/cdn-cgi/l/email-protection#b9d8ddd8d4cbd6dedccbca97cbdcdad6cbddd0d7def9ded4d8d0d597dad6d4"><span class="__cf_email__" data-cfemail="7f1e1b1e120d10181a0d0c510d1a1c100d1b1611183f18121e1613511c1012">[email&#160;protected]</span></a>
+                                <a href="mailto:adamrogers.recording@gmail.com">adamrogers.recording@gmail.com</a>
                             </div>
                         </div>
                         
@@ -85,10 +87,12 @@
                     </div>
                 </div>
                 
+                <!-- NETLIFY FORM - Verified Configuration -->
                 <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <!-- Hidden fields for Netlify -->
+                    <!-- Hidden field for Netlify form detection -->
                     <input type="hidden" name="form-name" value="contact" />
-                    <!-- Honeypot field for spam protection (hidden from users) -->
+                    
+                    <!-- Honeypot for spam protection (hidden from real users) -->
                     <p style="display: none;">
                         <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                     </p>
@@ -146,30 +150,25 @@
         </div>
     </section>
 
-    <!-- Quick Info -->
-    <section class="addon-services">
+    <!-- Process Section -->
+    <section class="process-section">
         <div class="container">
-            <h2 class="section-title">What Happens Next?</h2>
-            <div class="addon-grid">
-                <div class="addon-card">
-                    <div class="addon-price">1</div>
-                    <h3>I Review Your Info</h3>
-                    <p>I'll look at your project details and prepare my questions</p>
+            <h2 class="section-title">How It Works</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Get In Touch</h3>
+                    <p>Fill out the form or email/call directly. Tell me about your project and what you need.</p>
                 </div>
-                <div class="addon-card">
-                    <div class="addon-price">2</div>
-                    <h3>We Discuss Your Needs</h3>
-                    <p>Quick call or email exchange to understand your goals</p>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Free Sample Edit</h3>
+                    <p>Send me a raw file and I'll edit a sample (3-5 minutes) so you can hear the difference before committing.</p>
                 </div>
-                <div class="addon-card">
-                    <div class="addon-price">3</div>
-                    <h3>I Send a Quote</h3>
-                    <p>Clear pricing based on your specific requirements</p>
-                </div>
-                <div class="addon-card">
-                    <div class="addon-price">4</div>
-                    <h3>Free Sample (Optional)</h3>
-                    <p>Send me a file and I'll edit a sample so you can hear the difference</p>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Start Creating</h3>
+                    <p>Love the sample? Choose your package and send me your files. I'll have your polished audio back in 48 hours or less.</p>
                 </div>
             </div>
         </div>
@@ -181,29 +180,44 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <span class="logo-icon">●</span>
-                        <span>NightShift Sound</span>
+                        <span class="logo-icon">🎚️</span>
+                        <span class="logo-text">NightShift Sound</span>
                     </div>
-                    <p>Professional audio engineering for podcasters and YouTube creators.</p>
+                    <p class="footer-tagline">Professional audio engineering for creators who care about quality.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Services</h4>
-                        <a href="services.html#podcast">Podcast Editing</a>
-                        <a href="services.html#youtube">YouTube Audio</a>
-                        <a href="services.html#restoration">Audio Restoration</a>
+                        <ul>
+                            <li><a href="services.html#podcast">Podcast Editing</a></li>
+                            <li><a href="services.html#youtube">YouTube Audio</a></li>
+                            <li><a href="services.html#restoration">Audio Restoration</a></li>
+                        </ul>
                     </div>
                     <div class="footer-column">
                         <h4>Company</h4>
-                        <a href="about.html">About</a>
-                        <a href="portfolio.html">Portfolio</a>
-                        <a href="contact.html">Contact</a>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Connect</h4>
-                        <a href="/cdn-cgi/l/email-protection#a4c5c0c5c9d6cbc3c1d6d78ad6c1c7cbd6c0cdcac3e4c3c9c5cdc88ac7cbc9">Email Us</a>
-                        <a href="tel:8282261372">(828) 226-1372</a>
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:adamrogers.recording@gmail.com">adamrogers.recording@gmail.com</a></li>
+                            <li><a href="tel:8282261372">(828) 226-1372</a></li>
+                            <li>Franklin, Tennessee</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-       
+            <div class="footer-bottom">
+                <p>&copy; 2025 NightShift Sound. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
