@@ -1,0 +1,114 @@
+✅ UPDATES COMPLETE - Sound Design & Stats Fixed
+═══════════════════════════════════════════════════════════════
+
+## 📊 CHANGES MADE
+
+### 1. ✅ Added Sound Design & Music as Add-On Service
+**Location:** services.html - Add-On Services section
+
+**New Service Card:**
+┌─────────────────────────────────────┐
+│ Sound Design & Music                │
+│ +$30/episode                        │
+│ Background music, sound effects,    │
+│ transitions, and audio branding     │
+└─────────────────────────────────────┘
+
+**Why $30/episode?**
+- Competitive with industry rates ($25-50)
+- Covers time for music selection/mixing
+- Reasonable add-on to base pricing
+- Not too high to scare off clients
+- Not too low to devalue the service
+
+---
+
+### 2. ✅ Updated Episode Count: 500+ → 100+
+**Updated on:**
+- index.html (homepage hero stats)
+- portfolio.html (professional results section)
+
+**Changed from:**
+❌ "500+ Episodes Edited"
+
+**Changed to:**
+✅ "100+ Episodes Edited"
+
+═══════════════════════════════════════════════════════════════
+
+## 📦 FILES UPDATED (3 total)
+
+1. ✅ services.html - Added Sound Design add-on
+2. ✅ index.html - Changed 500+ to 100+
+3. ✅ portfolio.html - Changed 500+ to 100+
+
+═══════════════════════════════════════════════════════════════
+
+## 🎨 HOW IT LOOKS
+
+**Services Page - Add-On Services Section:**
+
+[Sound Design & Music]  [Rush Delivery]      [Show Notes]
++$30/episode           +$50                 +$35
+Background music,      24-hour turnaround   Written summary
+sound effects, etc.    for urgent projects  and timestamps
+
+[Transcription]        [Audiogram Creation] [Custom Intro/Outro]
++$45                   +$30                 $200
+Full text transcript   Shareable video      One-time creation
+                       clips for social     with music
+
+[Extra Revisions]
+Free
+Unlimited until satisfied
+
+---
+
+**Homepage & Portfolio Stats:**
+
+✅ 100+ Episodes Edited
+✅ 1.5M+ Combined Subscribers  
+✅ 48hr Average Turnaround
+
+═══════════════════════════════════════════════════════════════
+
+## 🚀 READY TO UPLOAD
+
+You now have 5 files to upload to GitHub:
+
+1. ✅ contact.html - Formspree form (mojkanrd)
+2. ✅ script.js - Form handler
+3. ✅ index.html - 100+ episodes stat
+4. ✅ portfolio.html - 100+ episodes stat  
+5. ✅ services.html - Sound Design add-on
+
+═══════════════════════════════════════════════════════════════
+
+## 📤 DEPLOYMENT
+
+**Upload to GitHub:**
+1. Download all 5 files from this conversation
+2. Go to GitHub → "Add file" → "Upload files"
+3. Drag all 5 files
+4. Commit message: "Added sound design service and updated stats"
+5. Wait for Netlify deploy
+6. Visit your live site to see changes
+
+═══════════════════════════════════════════════════════════════
+
+## ✨ WHAT CLIENTS WILL SEE
+
+**Services Page:**
+- Clear add-on option for sound design
+- $30/episode pricing (transparent)
+- Listed first in add-ons (premium positioning)
+- Professional description
+
+**Stats Everywhere:**
+- More accurate "100+ episodes" (builds trust)
+- Still impressive for new clients
+- Room to grow the number as you get more work
+
+═══════════════════════════════════════════════════════════════
+
+All set! Upload those 5 files and you're done. 🎯
