@@ -43,7 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Handling - NETLIFY FORMS
+// Contact Form Handling - FORMSPREE (Free Email Notifications)
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
@@ -55,20 +55,22 @@ if (contactForm) {
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
         
-        // Prepare form data for Netlify
+        // Get form data
         const formData = new FormData(contactForm);
         
         try {
-            // Submit to Netlify
-            const response = await fetch('/', {
+            // Submit to Formspree
+            const response = await fetch(contactForm.action, {
                 method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
             
             if (response.ok) {
                 // Success!
-                alert('✅ Message sent successfully! I\'ll get back to you within 24 hours (usually much faster). Check your email for confirmation.');
+                alert('✅ Message sent successfully! I\'ll get back to you within 24 hours (usually much faster).');
                 contactForm.reset();
             } else {
                 throw new Error('Form submission failed');
